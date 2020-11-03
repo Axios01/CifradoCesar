@@ -4,18 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cifrado Cesar</title>
+    <style>
+        *{
+	        text-align: center;
+            margin: 0; 
+            padding: 0;
+        }
+        .boton{
+            text-decoration: none;
+            display: inline-block;
+            height: 50px;
+            width: 110px;
+            padding: 15px;
+            margin: 7px;
+            box-sizing: border-box;
+            background-color: rgba(68, 73, 139, 0.98);
+            border-radius: 10px;
+            color: #FFFFFF;
+            font-family:'Ubuntu', 'Open Sans', 'Arial';
+            font-size: 15px;
+            text-align: center;
+            vertical-align: middle;
+            
+        }
+        body{
+            background-color: #92AFD7;
+            align-items: center; 
+        }
+        .divi{
+            font-family: "Yu Gothic","Montserrat light",Arial;
+            background-color: rgba(104, 36, 68, 0.98);
+            text-align: left;
+            padding: 7%;
+            color: white;
+            font-weight: bold;
+            width:50%;
+            height:50%;
+            
+            margin: auto;
+            margin-top: 15%;
+            
+        }
+        input{
+            size: 16px;
+            border-width: 1.3px;
+            border-style: solid;
+            color: gray;
+            border-color: lightgray;
+            height: auto;
+            font-family:'Verdana', 'Candara';
+            border-radius: 7px;
+            box-sizing: border-box;
+            padding: 15px;
+            width:60%;
+            
+        }
+    </style>
 </head>
 <body>
-    Este es un ejemplo super kawaii uwu, del cifrado
-    Cesar, que se encarga de poder cifrar las letras
-    del alfabeto segun sea su posicion. :3 uwu
-
-    <textarea id="cadena" ></textarea>
-    <input type="text" id="shift">
-
-    <p> <input type="button" value="Cifrar" onclick="codificar()" >
-        <input type="button" value="Decifrar" onclick="decodificar()" > </p>
-    
+    <div class="divi">
+        <h2>Cifrado César</h2>
+        <label>Texto: </label>
+        <br>
+        <input type="text" id="cadena"><br>
+        <br>
+        <label>Número de salto: </label>
+        <br>
+        <input type="text" id="shift"><br>
+        <br>
+        <input type="button" class="boton" value="Cifrar" onclick="codificar()" >
+        <input type="button" class="boton" value="Decifrar" onclick="decodificar()" >
+    </div>
+    <br>
     <div id="resultado" > </div>
     <script src="js/logica.js" ></script>
 </body>
