@@ -28,7 +28,7 @@ var cesar = cesar || (function(){
             return function(c){
                 
                 var i = abc.indexOf(c.toLowerCase());
-                //console.log("Index: "+i);
+                console.log("Index: "+ i);
             
                 //console.log("AHHHHH PTM: " + abc.indexOf(c.toLowerCase()));
                 /*for (let i2 = 0; i2 < le; i2++) {
@@ -40,16 +40,22 @@ var cesar = cesar || (function(){
                     
                     var pos = i;
                     
+                    
                     if(action){
                         
                         pos = (pos + shift) % le;                      
                         //console.log("AVR: " + pos);
                     }else{
-                        
+                        pos = (pos + shift) % le;
+                        //console.log("AVR1: " + pos);
+                        var obo = pos;
                         pos = (pos - shift) % le;
+                        
+                        //console.log("AVR2: " + pos);
                         if(pos<0){
-                            i = le - shift + i;
-                            pos = i;
+                            obo = (obo - shift) % le+le;
+                            //console.log("AVR3: " + i);
+                            pos = obo;
                         }
                     }
                     return abc[pos];
@@ -63,6 +69,7 @@ var cesar = cesar || (function(){
             return replace(match);
         });
 
+        
     }
         return{
             encode : function(txt, desp){
