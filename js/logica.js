@@ -63,7 +63,6 @@ var cesar = cesar || (function(){
             return replace(match);
         });
 
-        
     }
         return{
             encode : function(txt, desp){
